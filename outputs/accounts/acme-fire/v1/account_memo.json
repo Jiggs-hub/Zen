@@ -1,0 +1,60 @@
+{
+  "account_id": "acme-fire",
+  "after_hours_flow_summary": "Greet the caller, ask purpose, confirm if emergency, collect name, number, and address immediately for emergencies, attempt transfer, use fallback apology and follow-up assurance if transfer fails, collect non-emergency details for next business day follow-up, ask if anything else is needed, and close the call. Emergency route: configured emergency route.",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "end": "17:00",
+    "start": "08:00",
+    "timezone": "America/New_York"
+  },
+  "call_transfer_rules": {
+    "retries": 2,
+    "timeout_seconds": 45,
+    "what_to_say_if_fails": "Caller: If transfer fails, apologize and tell them dispatch will call back quickly."
+  },
+  "company_name": "Acme Fire Protection LLC",
+  "emergency_definition": [
+    "Caller: Emergency means sprinkler leak, active fire alarm, or smoke from panel."
+  ],
+  "emergency_routing_rules": {
+    "fallback": "Caller: If transfer fails, apologize and tell them dispatch will call back quickly.",
+    "order": [],
+    "who_to_call": []
+  },
+  "integration_constraints": [
+    "Caller: We use ServiceTrade and never create sprinkler jobs automatically."
+  ],
+  "non_emergency_routing_rules": {
+    "fallback": "Caller: If transfer fails, apologize and tell them dispatch will call back quickly.",
+    "order": [
+      "(614) 555-1212",
+      "dispatch",
+      "office"
+    ],
+    "who_to_call": [
+      "(614) 555-1212",
+      "dispatch",
+      "office"
+    ]
+  },
+  "notes": "Generated from demo input (acme-fire-demo.txt). Only explicitly detected values were captured.",
+  "office_address": "2450 Main Street, Columbus, OH 43215",
+  "office_hours_flow_summary": "Greet the caller, ask the purpose, collect name and callback number, route or transfer based on the request, follow fallback messaging if transfer fails after 45 seconds, ask if anything else is needed, and close the call. Primary office-hours route: (614) 555-1212, dispatch, office.",
+  "questions_or_unknowns": [
+    "Confirm emergency_routing_rules.who_to_call and order."
+  ],
+  "services_supported": [
+    "sprinkler service",
+    "fire alarm service",
+    "alarm systems",
+    "fire extinguisher service",
+    "inspections",
+    "facility maintenance"
+  ]
+}

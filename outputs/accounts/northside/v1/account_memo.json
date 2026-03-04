@@ -1,0 +1,60 @@
+{
+  "account_id": "northside",
+  "after_hours_flow_summary": "Greet the caller, ask purpose, confirm if emergency, collect name, number, and address immediately for emergencies, attempt transfer, use fallback apology and follow-up assurance if transfer fails, collect non-emergency details for next business day follow-up, ask if anything else is needed, and close the call. Emergency route: 312-555-0134, on-call technician.",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "end": "18:00",
+    "start": "07:00",
+    "timezone": "America/Chicago"
+  },
+  "call_transfer_rules": {
+    "retries": null,
+    "timeout_seconds": null,
+    "what_to_say_if_fails": ""
+  },
+  "company_name": "Northside HVAC and Electrical",
+  "emergency_definition": [
+    "Caller: After hours, emergency no-cooling calls should go to on-call technician at 312-555-0134."
+  ],
+  "emergency_routing_rules": {
+    "fallback": "",
+    "order": [
+      "312-555-0134",
+      "on-call technician"
+    ],
+    "who_to_call": [
+      "312-555-0134",
+      "on-call technician"
+    ]
+  },
+  "integration_constraints": [],
+  "non_emergency_routing_rules": {
+    "fallback": "",
+    "order": [
+      "312-555-0134",
+      "on-call technician"
+    ],
+    "who_to_call": [
+      "312-555-0134",
+      "on-call technician"
+    ]
+  },
+  "notes": "Generated from demo input (northside-demo.txt). Only explicitly detected values were captured.",
+  "office_address": "",
+  "office_hours_flow_summary": "Greet the caller, ask the purpose, collect name and callback number, route or transfer based on the request, follow fallback messaging if transfer fails after configured timeout, ask if anything else is needed, and close the call. Primary office-hours route: 312-555-0134, on-call technician.",
+  "questions_or_unknowns": [
+    "Confirm office_address.",
+    "Confirm call_transfer_rules.timeout_seconds.",
+    "Confirm call_transfer_rules.retries."
+  ],
+  "services_supported": [
+    "electrical service",
+    "hvac service"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "account_id": "acme-fire",
+  "after_hours_flow_summary": "Greet the caller, ask purpose, confirm if emergency, collect name, number, and address immediately for emergencies, attempt transfer, use fallback apology and follow-up assurance if transfer fails, collect non-emergency details for next business day follow-up, ask if anything else is needed, and close the call. Emergency route: phone tree, dispatch, (614) 555-9898.",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "end": "17:30",
+    "start": "08:00",
+    "timezone": "America/New_York"
+  },
+  "call_transfer_rules": {
+    "retries": 2,
+    "timeout_seconds": 60,
+    "what_to_say_if_fails": "I am sorry we could not connect you right now. Dispatch will call you shortly."
+  },
+  "company_name": "Acme Fire Protection LLC",
+  "emergency_definition": [
+    "sprinkler leak",
+    "active alarm with water flow",
+    "visible smoke from panel"
+  ],
+  "emergency_routing_rules": {
+    "fallback": "If transfer fails after 60 seconds, notify dispatch and assure immediate callback.",
+    "order": [
+      "phone tree",
+      "dispatch",
+      "(614) 555-9898"
+    ],
+    "who_to_call": [
+      "phone tree",
+      "dispatch",
+      "(614) 555-9898"
+    ]
+  },
+  "integration_constraints": [
+    "Never create sprinkler jobs in ServiceTrade.",
+    "Create only callback tasks for unresolved calls."
+  ],
+  "non_emergency_routing_rules": {
+    "fallback": "Collect issue summary and confirm next-business-day follow-up.",
+    "order": [
+      "office dispatch",
+      "(614) 555-1212"
+    ],
+    "who_to_call": [
+      "office dispatch",
+      "(614) 555-1212"
+    ]
+  },
+  "notes": "v2 merged from onboarding input (acme-fire-onboarding.json) over existing v1 values. Onboarding values override v1 where explicitly present.",
+  "office_address": "2450 Main Street, Columbus, OH 43215",
+  "office_hours_flow_summary": "Greet the caller, ask the purpose, collect name and callback number, route or transfer based on the request, follow fallback messaging if transfer fails after 60 seconds, ask if anything else is needed, and close the call. Primary office-hours route: office dispatch, (614) 555-1212.",
+  "questions_or_unknowns": [],
+  "services_supported": [
+    "sprinkler service",
+    "fire alarm service",
+    "alarm systems",
+    "fire extinguisher service",
+    "inspections",
+    "facility maintenance"
+  ]
+}

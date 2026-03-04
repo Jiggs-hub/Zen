@@ -1,0 +1,92 @@
+﻿{
+  "name": "Clara Assignment Pipeline",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-trigger",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts/run_pipeline.py --mode demo"
+      },
+      "id": "run-demo",
+      "name": "Run Demo Pipeline",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [500, 220]
+    },
+    {
+      "parameters": {
+        "command": "python scripts/run_pipeline.py --mode onboarding"
+      },
+      "id": "run-onboarding",
+      "name": "Run Onboarding Pipeline",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [500, 390]
+    },
+    {
+      "parameters": {
+        "command": "python scripts/run_pipeline.py --mode all"
+      },
+      "id": "run-all",
+      "name": "Run All (Batch)",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [800, 300]
+    },
+    {
+      "parameters": {
+        "command": "type tracker\\tasks.json"
+      },
+      "id": "view-tasks",
+      "name": "View Task Tracker",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1080, 300]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Run Demo Pipeline",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Run Onboarding Pipeline",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Run All (Batch)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run All (Batch)": {
+      "main": [
+        [
+          {
+            "node": "View Task Tracker",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1"
+}

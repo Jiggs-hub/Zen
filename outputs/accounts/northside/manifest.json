@@ -1,0 +1,19 @@
+{
+  "account_id": "northside",
+  "latest_version": "v2",
+  "versions": {
+    "v1": {
+      "agent_spec_path": "outputs\\accounts\\northside\\v1\\retell_agent_spec.json",
+      "generated_at": "2026-03-04T18:30:23+00:00",
+      "memo_path": "outputs\\accounts\\northside\\v1\\account_memo.json",
+      "source_file": "northside-demo.txt"
+    },
+    "v2": {
+      "agent_spec_path": "outputs\\accounts\\northside\\v2\\retell_agent_spec.json",
+      "changes_path": "outputs\\accounts\\northside\\changes.json",
+      "generated_at": "2026-03-04T18:30:24+00:00",
+      "memo_path": "outputs\\accounts\\northside\\v2\\account_memo.json",
+      "source_file": "northside-onboarding.txt"
+    }
+  }
+}

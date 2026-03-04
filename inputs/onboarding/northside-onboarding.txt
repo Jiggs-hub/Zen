@@ -1,0 +1,9 @@
+﻿Onboarding call transcript
+
+Customer success: Let's finalize routing details.
+Caller: Northside HVAC and Electrical confirms timezone is America/Chicago.
+Caller: Address is 900 West Fulton Market, Chicago, IL 60607.
+Caller: Emergency includes no cooling at hospitals, burning smell, and electrical outage.
+Caller: Emergency calls first transfer to on-call manager at 312-555-9900, then dispatch at 312-555-0134.
+Caller: If no answer after 30 seconds and 1 retry, apologize and promise callback in 10 minutes.
+Caller: During office hours, non-emergency should transfer to office at 312-555-2200.

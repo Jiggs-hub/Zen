@@ -1,0 +1,50 @@
+{
+  "tasks": [
+    {
+      "account_id": "acme-fire",
+      "artifact_paths": [
+        "outputs\\accounts\\acme-fire\\v1\\account_memo.json",
+        "outputs\\accounts\\acme-fire\\v1\\retell_agent_spec.json"
+      ],
+      "stage": "demo",
+      "status": "generated",
+      "task_id": "acme-fire-v1-review",
+      "updated_at": "2026-03-04T18:30:23+00:00"
+    },
+    {
+      "account_id": "northside",
+      "artifact_paths": [
+        "outputs\\accounts\\northside\\v1\\account_memo.json",
+        "outputs\\accounts\\northside\\v1\\retell_agent_spec.json"
+      ],
+      "stage": "demo",
+      "status": "generated",
+      "task_id": "northside-v1-review",
+      "updated_at": "2026-03-04T18:30:23+00:00"
+    },
+    {
+      "account_id": "acme-fire",
+      "artifact_paths": [
+        "outputs\\accounts\\acme-fire\\v2\\account_memo.json",
+        "outputs\\accounts\\acme-fire\\v2\\retell_agent_spec.json",
+        "outputs\\accounts\\acme-fire\\changes.json"
+      ],
+      "stage": "onboarding",
+      "status": "generated",
+      "task_id": "acme-fire-v2-review",
+      "updated_at": "2026-03-04T18:30:23+00:00"
+    },
+    {
+      "account_id": "northside",
+      "artifact_paths": [
+        "outputs\\accounts\\northside\\v2\\account_memo.json",
+        "outputs\\accounts\\northside\\v2\\retell_agent_spec.json",
+        "outputs\\accounts\\northside\\changes.json"
+      ],
+      "stage": "onboarding",
+      "status": "generated",
+      "task_id": "northside-v2-review",
+      "updated_at": "2026-03-04T18:30:24+00:00"
+    }
+  ]
+}

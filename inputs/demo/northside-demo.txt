@@ -1,0 +1,7 @@
+﻿Demo transcript notes
+
+Caller: This is Jordan from Northside HVAC and Electrical.
+Caller: We take HVAC and electrical service calls.
+Caller: Weekdays 7am to 6pm CST.
+Caller: After hours, emergency no-cooling calls should go to on-call technician at 312-555-0134.
+Caller: Non emergency after-hours calls can be queued for next day follow-up.

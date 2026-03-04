@@ -1,0 +1,61 @@
+{
+  "account_id": "northside",
+  "after_hours_flow_summary": "Greet the caller, ask purpose, confirm if emergency, collect name, number, and address immediately for emergencies, attempt transfer, use fallback apology and follow-up assurance if transfer fails, collect non-emergency details for next business day follow-up, ask if anything else is needed, and close the call. Emergency route: 312-555-9900, 312-555-0134, dispatch, on-call manager.",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "end": "18:00",
+    "start": "07:00",
+    "timezone": "America/Chicago"
+  },
+  "call_transfer_rules": {
+    "retries": 1,
+    "timeout_seconds": 30,
+    "what_to_say_if_fails": "Caller: If no answer after 30 seconds and 1 retry, apologize and promise callback in 10 minutes."
+  },
+  "company_name": "Northside HVAC and Electrical",
+  "emergency_definition": [
+    "Caller: Emergency includes no cooling at hospitals, burning smell, and electrical outage.",
+    "Caller: Emergency calls first transfer to on-call manager at 312-555-9900, then dispatch at 312-555-0134."
+  ],
+  "emergency_routing_rules": {
+    "fallback": "Caller: If no answer after 30 seconds and 1 retry, apologize and promise callback in 10 minutes.",
+    "order": [
+      "312-555-9900",
+      "312-555-0134",
+      "dispatch",
+      "on-call manager"
+    ],
+    "who_to_call": [
+      "312-555-9900",
+      "312-555-0134",
+      "dispatch",
+      "on-call manager"
+    ]
+  },
+  "integration_constraints": [],
+  "non_emergency_routing_rules": {
+    "fallback": "Caller: If no answer after 30 seconds and 1 retry, apologize and promise callback in 10 minutes.",
+    "order": [
+      "312-555-2200",
+      "office"
+    ],
+    "who_to_call": [
+      "312-555-2200",
+      "office"
+    ]
+  },
+  "notes": "v2 merged from onboarding input (northside-onboarding.txt) over existing v1 values. Onboarding values override v1 where explicitly present.",
+  "office_address": "900 West Fulton Market, Chicago, IL 60607.",
+  "office_hours_flow_summary": "Greet the caller, ask the purpose, collect name and callback number, route or transfer based on the request, follow fallback messaging if transfer fails after 30 seconds, ask if anything else is needed, and close the call. Primary office-hours route: 312-555-2200, office.",
+  "questions_or_unknowns": [],
+  "services_supported": [
+    "electrical service",
+    "hvac service"
+  ]
+}

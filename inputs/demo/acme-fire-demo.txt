@@ -1,0 +1,12 @@
+﻿Demo call transcript
+
+Sales rep: Thanks for taking the demo. Can you tell me your company name?
+Caller: We are Acme Fire Protection LLC.
+Caller: We handle sprinkler inspections, fire alarm service, and extinguisher maintenance.
+Caller: Our business hours are Monday to Friday 8:00 AM to 5:00 PM EST.
+Caller: The office address is 2450 Main Street, Columbus, OH 43215.
+Caller: Emergency means sprinkler leak, active fire alarm, or smoke from panel.
+Caller: During business hours, non-emergency calls should go to office dispatch at (614) 555-1212.
+Caller: We usually transfer with a 45 second timeout and 2 retries.
+Caller: If transfer fails, apologize and tell them dispatch will call back quickly.
+Caller: We use ServiceTrade and never create sprinkler jobs automatically.

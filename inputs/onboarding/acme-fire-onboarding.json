@@ -1,0 +1,34 @@
+﻿{
+  "account_id": "acme-fire",
+  "company_name": "Acme Fire Protection LLC",
+  "business_hours": {
+    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "start": "08:00 AM",
+    "end": "05:30 PM",
+    "timezone": "America/New_York"
+  },
+  "emergency_definition": [
+    "sprinkler leak",
+    "active alarm with water flow",
+    "visible smoke from panel"
+  ],
+  "emergency_routing_rules": {
+    "who_to_call": ["phone tree", "dispatch", "(614) 555-9898"],
+    "order": ["phone tree", "dispatch", "(614) 555-9898"],
+    "fallback": "If transfer fails after 60 seconds, notify dispatch and assure immediate callback."
+  },
+  "non_emergency_routing_rules": {
+    "who_to_call": ["office dispatch", "(614) 555-1212"],
+    "order": ["office dispatch", "(614) 555-1212"],
+    "fallback": "Collect issue summary and confirm next-business-day follow-up."
+  },
+  "call_transfer_rules": {
+    "timeout_seconds": 60,
+    "retries": 2,
+    "what_to_say_if_fails": "I am sorry we could not connect you right now. Dispatch will call you shortly."
+  },
+  "integration_constraints": [
+    "Never create sprinkler jobs in ServiceTrade.",
+    "Create only callback tasks for unresolved calls."
+  ]
+}

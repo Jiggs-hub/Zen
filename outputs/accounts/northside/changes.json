@@ -1,0 +1,285 @@
+{
+  "account_id": "northside",
+  "changes": [
+    {
+      "field_path": "after_hours_flow_summary",
+      "new_value": "Greet the caller, ask purpose, confirm if emergency, collect name, number, and address immediately for emergencies, attempt transfer, use fallback apology and follow-up assurance if transfer fails, collect non-emergency details for next business day follow-up, ask if anything else is needed, and close the call. Emergency route: 312-555-9900, 312-555-0134, dispatch, on-call manager.",
+      "old_value": "Greet the caller, ask purpose, confirm if emergency, collect name, number, and address immediately for emergencies, attempt transfer, use fallback apology and follow-up assurance if transfer fails, collect non-emergency details for next business day follow-up, ask if anything else is needed, and close the call. Emergency route: 312-555-0134, on-call technician.",
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "call_transfer_rules.retries",
+      "new_value": 1,
+      "old_value": null,
+      "reason": "Added from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "call_transfer_rules.timeout_seconds",
+      "new_value": 30,
+      "old_value": null,
+      "reason": "Added from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "call_transfer_rules.what_to_say_if_fails",
+      "new_value": "Caller: If no answer after 30 seconds and 1 retry, apologize and promise callback in 10 minutes.",
+      "old_value": "",
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "emergency_definition",
+      "new_value": [
+        "Caller: Emergency includes no cooling at hospitals, burning smell, and electrical outage.",
+        "Caller: Emergency calls first transfer to on-call manager at 312-555-9900, then dispatch at 312-555-0134."
+      ],
+      "old_value": [
+        "Caller: After hours, emergency no-cooling calls should go to on-call technician at 312-555-0134."
+      ],
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "emergency_routing_rules.fallback",
+      "new_value": "Caller: If no answer after 30 seconds and 1 retry, apologize and promise callback in 10 minutes.",
+      "old_value": "",
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "emergency_routing_rules.order",
+      "new_value": [
+        "312-555-9900",
+        "312-555-0134",
+        "dispatch",
+        "on-call manager"
+      ],
+      "old_value": [
+        "312-555-0134",
+        "on-call technician"
+      ],
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "emergency_routing_rules.who_to_call",
+      "new_value": [
+        "312-555-9900",
+        "312-555-0134",
+        "dispatch",
+        "on-call manager"
+      ],
+      "old_value": [
+        "312-555-0134",
+        "on-call technician"
+      ],
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "non_emergency_routing_rules.fallback",
+      "new_value": "Caller: If no answer after 30 seconds and 1 retry, apologize and promise callback in 10 minutes.",
+      "old_value": "",
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "non_emergency_routing_rules.order",
+      "new_value": [
+        "312-555-2200",
+        "office"
+      ],
+      "old_value": [
+        "312-555-0134",
+        "on-call technician"
+      ],
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "non_emergency_routing_rules.who_to_call",
+      "new_value": [
+        "312-555-2200",
+        "office"
+      ],
+      "old_value": [
+        "312-555-0134",
+        "on-call technician"
+      ],
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "notes",
+      "new_value": "v2 merged from onboarding input (northside-onboarding.txt) over existing v1 values. Onboarding values override v1 where explicitly present.",
+      "old_value": "Generated from demo input (northside-demo.txt). Only explicitly detected values were captured.",
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "office_address",
+      "new_value": "900 West Fulton Market, Chicago, IL 60607.",
+      "old_value": "",
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "office_hours_flow_summary",
+      "new_value": "Greet the caller, ask the purpose, collect name and callback number, route or transfer based on the request, follow fallback messaging if transfer fails after 30 seconds, ask if anything else is needed, and close the call. Primary office-hours route: 312-555-2200, office.",
+      "old_value": "Greet the caller, ask the purpose, collect name and callback number, route or transfer based on the request, follow fallback messaging if transfer fails after configured timeout, ask if anything else is needed, and close the call. Primary office-hours route: 312-555-0134, on-call technician.",
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "questions_or_unknowns",
+      "new_value": [],
+      "old_value": [
+        "Confirm office_address.",
+        "Confirm call_transfer_rules.timeout_seconds.",
+        "Confirm call_transfer_rules.retries."
+      ],
+      "reason": "Updated from onboarding input.",
+      "section": "account_memo"
+    },
+    {
+      "field_path": "agent_name",
+      "new_value": "clara-northside-v2",
+      "old_value": "clara-northside-v1",
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "call_transfer_protocol.retries",
+      "new_value": 1,
+      "old_value": null,
+      "reason": "Added from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "call_transfer_protocol.route_priority",
+      "new_value": [
+        "312-555-9900",
+        "312-555-0134",
+        "dispatch",
+        "on-call manager"
+      ],
+      "old_value": [
+        "312-555-0134",
+        "on-call technician"
+      ],
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "call_transfer_protocol.timeout_seconds",
+      "new_value": 30,
+      "old_value": null,
+      "reason": "Added from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "fallback_protocol_if_transfer_fails.message",
+      "new_value": "Caller: If no answer after 30 seconds and 1 retry, apologize and promise callback in 10 minutes.",
+      "old_value": "Apologize for transfer failure, confirm callback details, and assure quick follow-up.",
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "key_variables.emergency_routing.fallback",
+      "new_value": "Caller: If no answer after 30 seconds and 1 retry, apologize and promise callback in 10 minutes.",
+      "old_value": "",
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "key_variables.emergency_routing.order",
+      "new_value": [
+        "312-555-9900",
+        "312-555-0134",
+        "dispatch",
+        "on-call manager"
+      ],
+      "old_value": [
+        "312-555-0134",
+        "on-call technician"
+      ],
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "key_variables.emergency_routing.who_to_call",
+      "new_value": [
+        "312-555-9900",
+        "312-555-0134",
+        "dispatch",
+        "on-call manager"
+      ],
+      "old_value": [
+        "312-555-0134",
+        "on-call technician"
+      ],
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "key_variables.non_emergency_routing.fallback",
+      "new_value": "Caller: If no answer after 30 seconds and 1 retry, apologize and promise callback in 10 minutes.",
+      "old_value": "",
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "key_variables.non_emergency_routing.order",
+      "new_value": [
+        "312-555-2200",
+        "office"
+      ],
+      "old_value": [
+        "312-555-0134",
+        "on-call technician"
+      ],
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "key_variables.non_emergency_routing.who_to_call",
+      "new_value": [
+        "312-555-2200",
+        "office"
+      ],
+      "old_value": [
+        "312-555-0134",
+        "on-call technician"
+      ],
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "key_variables.office_address",
+      "new_value": "900 West Fulton Market, Chicago, IL 60607.",
+      "old_value": "",
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "system_prompt",
+      "new_value": "You are Clara Answers for account northside. This is configuration version v2.\nCompany name: Northside HVAC and Electrical.\nOffice address: 900 West Fulton Market, Chicago, IL 60607..\nBusiness hours: Monday, Tuesday, Wednesday, Thursday, Friday, 07:00 to 18:00, timezone America/Chicago.\nServices supported: electrical service, hvac service.\nEmergency definition: Caller: Emergency includes no cooling at hospitals, burning smell, and electrical outage., Caller: Emergency calls first transfer to on-call manager at 312-555-9900, then dispatch at 312-555-0134..\n\nCore rules:\n- Keep calls concise and calm.\n- Do not mention internal tools, automations, or function calls.\n- Only collect information needed for routing and dispatch.\n- If data is missing, ask one focused clarification question.\n\nBusiness-hours flow:\n1. Greet caller.\n2. Ask purpose of the call.\n3. Collect caller name and callback number.\n4. Route or transfer using non-emergency routing: 312-555-2200, office.\n5. If transfer fails, apply fallback protocol.\n6. Confirm next steps.\n7. Ask if the caller needs anything else.\n8. Close the call professionally.\n\nAfter-hours flow:\n1. Greet caller.\n2. Ask purpose.\n3. Confirm whether this is an emergency.\n4. If emergency, immediately collect caller name, callback number, and incident address.\n5. Attempt transfer using emergency routing: 312-555-9900, 312-555-0134, dispatch, on-call manager.\n6. If transfer fails, apologize and assure fast follow-up.\n7. If non-emergency, collect concise details and promise follow-up during business hours.\n8. Ask if the caller needs anything else.\n9. Close the call professionally.\n\nTransfer protocol:\n- Timeout: 30 seconds.\n- Retries: 1.\n- Failure script: Caller: If no answer after 30 seconds and 1 retry, apologize and promise callback in 10 minutes.",
+      "old_value": "You are Clara Answers for account northside. This is configuration version v1.\nCompany name: Northside HVAC and Electrical.\nOffice address: not provided.\nBusiness hours: Monday, Tuesday, Wednesday, Thursday, Friday, 07:00 to 18:00, timezone America/Chicago.\nServices supported: electrical service, hvac service.\nEmergency definition: Caller: After hours, emergency no-cooling calls should go to on-call technician at 312-555-0134..\n\nCore rules:\n- Keep calls concise and calm.\n- Do not mention internal tools, automations, or function calls.\n- Only collect information needed for routing and dispatch.\n- If data is missing, ask one focused clarification question.\n\nBusiness-hours flow:\n1. Greet caller.\n2. Ask purpose of the call.\n3. Collect caller name and callback number.\n4. Route or transfer using non-emergency routing: 312-555-0134, on-call technician.\n5. If transfer fails, apply fallback protocol.\n6. Confirm next steps.\n7. Ask if the caller needs anything else.\n8. Close the call professionally.\n\nAfter-hours flow:\n1. Greet caller.\n2. Ask purpose.\n3. Confirm whether this is an emergency.\n4. If emergency, immediately collect caller name, callback number, and incident address.\n5. Attempt transfer using emergency routing: 312-555-0134, on-call technician.\n6. If transfer fails, apologize and assure fast follow-up.\n7. If non-emergency, collect concise details and promise follow-up during business hours.\n8. Ask if the caller needs anything else.\n9. Close the call professionally.\n\nTransfer protocol:\n- Timeout: not provided seconds.\n- Retries: not provided.\n- Failure script: Apologize, confirm callback details, and assure prompt follow-up.",
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    },
+    {
+      "field_path": "version",
+      "new_value": "v2",
+      "old_value": "v1",
+      "reason": "Updated from onboarding input.",
+      "section": "retell_agent_spec"
+    }
+  ],
+  "from_version": "v1",
+  "generated_at": "2026-03-04T18:30:24+00:00",
+  "source_file": "northside-onboarding.txt",
+  "to_version": "v2"
+}
