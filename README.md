@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# Clara Answers Intern Assignment - Zero-Cost Automation Pipeline
 
 This repository implements a local, zero-cost automation pipeline for:
@@ -187,3 +188,6 @@ Then inspect:
 - `outputs/accounts/northside/`
 - `tracker/tasks.json`
 - `changelog/pipeline_runs.jsonl`
+=======
+"# Zen" 
+>>>>>>> 1620e82b91a8aaa23e604a0a7c815cd363af1611
